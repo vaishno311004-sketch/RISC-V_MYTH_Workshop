@@ -13,9 +13,8 @@ Run a small RISC-V program on a PicoRV32 processor model using the RV32IM toolch
 | `04_Firmware_HEX_32bit_View.png` | 32-bit firmware memory contents (`firmware32.hex`) |
 | `05_Simulation_1_to_2.png` | Simulation displays `Sum of number from 1 to 2 is 3`, then `TRAP` |
 | `06_Simulation_1_to_3.png` | Simulation displays `Sum of number from 1 to 3 is 6`, then `TRAP` |
-| `07_Simulation_Debugging_and_Rerun.png` | Intermediate run shows an incomplete message followed by `TRAP`; later run displays the valid sum for 1 to 2 |
 
-The two additional screenshots of the `1 to 9 = 45` assembly experiment and `load.s` source were captured in the `riscv_day1` directory, so they are organized under Day 1 rather than duplicated as Day 2 results.
+The additional screenshots of the `1 to 9 = 45` assembly experiment and `load.s` source were captured in the `riscv_day1` directory, so they are organized under Day 1 rather than duplicated as Day 2 results.
 
 ## Workflow
 1. Inspect `picorv32.v` and `testbench.v`.
