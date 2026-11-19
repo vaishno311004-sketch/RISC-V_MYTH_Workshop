@@ -1,0 +1,16 @@
+# Generated programs and object files
+*.o
+*.elf
+*.vvp
+*.tmp
+*.hex
+*.log
+*.vcd
+*.fst
+*.swp
+*.swo
+# Python cache
+__pycache__/
+*.pyc
+# Machine-specific build directories
+build/
