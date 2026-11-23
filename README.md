@@ -1,8 +1,8 @@
-# RISC-V MYTH Workshop — Three-Day Practical Report
+# RISC-V MYTH Workshop — Practical Reports (Days 1–4)
 
 **RISC-V ISA • PicoRV32 • TL-Verilog / Makerchip**
 
-This repository documents three days of hands-on work with the RISC-V toolchain, processor simulation, and introductory digital hardware design. It includes **source code, original terminal/IDE screenshots, detailed explanations of each screenshot, observed results, and lessons learned**.
+This repository documents four days of hands-on work with the RISC-V toolchain, processor simulation, and introductory digital hardware design. It includes **source code, original terminal/IDE screenshots, detailed explanations of each screenshot, observed results, and lessons learned**.
 
 ## Open the illustrated day-by-day reports
 
@@ -11,8 +11,9 @@ This repository documents three days of hands-on work with the RISC-V toolchain,
 | **Day 1** | **[RISC-V ISA and cross-compilation](Day1_RISCV_ISA/README.md)** | 11 screenshots | GCC and RISC-V QEMU execution, C/assembly summation, machine-code disassembly, hex address calculations |
 | **Day 2** | **[PicoRV32 processor simulation](Day2_PicoRV32/README.md)** | 6 screenshots | RV32IM firmware generation, Verilog testbench, memory image conversion, sums of 3 and 6 verified with VVP |
 | **Day 3** | **[TL-Verilog and Makerchip](Day3_TL_Verilog/README.md)** | 13 screenshots | Logic gates, MUX, register, pipeline, counter, arithmetic and four-operation ALU |
+| **Day 4** | **[RISC-V CPU assembly and execution](Day4_RISCV_CPU/README.md)** | 15 screenshots (images pending upload) | Instruction fetch/decode, register file, ADD/ADDI, branch loop and observed result 45 |
 
-**Total: 30 screenshots**, each embedded and interpreted individually in the corresponding report. To explore the work, click a **Day** report above rather than opening screenshots without context.
+**Total: 45 screenshots documented:** 30 in Days 1–3 and 15 newly annotated in the Day 4 report (Day 4 image upload pending). To explore the work, click a **Day** report above rather than opening screenshots without context.
 
 ## Selected recorded outputs
 
@@ -37,6 +38,10 @@ TRAP
 ```
 
 The arithmetic output was verified; `TRAP` signals a processor trap/termination event in this simulation and is not by itself proof of functional correctness.
+
+### Day 4: RISC-V CPU sum-of-1-to-9 validation
+
+The running sum in register `x14` reaches `0x2D` (45), and the final register `x10` is observed briefly receiving `0x2D`. This is a verified *observed result*, not yet a permanent halted state; the workshop pass condition is cycle-count-based. See the [full Day 4 screenshot report](Day4_RISCV_CPU/README.md).
 
 ### Day 3: ALU verification
 
@@ -66,7 +71,7 @@ The screenshots are records of workshop iterations, so some show error messages,
 
 ## Scope and attribution
 
-This repository is a practical learning record, **not a completed RISC-V processor design**. PicoRV32 and upstream workshop collateral are third-party materials and should retain their original license notices.
+This repository is a practical learning record, **not a fully completed or exhaustively tested RISC-V processor design**. PicoRV32 and upstream workshop collateral are third-party materials and should retain their original license notices.
 
 References:
 - [RISC-V MYTH workshop](https://github.com/stevehoover/RISC-V_MYTH_Workshop)
@@ -76,4 +81,4 @@ References:
 
 ---
 
-**Start reading:** [Day 1 →](Day1_RISCV_ISA/README.md) · [Day 2 →](Day2_PicoRV32/README.md) · [Day 3 →](Day3_TL_Verilog/README.md)
+**Start reading:** [Day 1 →](Day1_RISCV_ISA/README.md) · [Day 2 →](Day2_PicoRV32/README.md) · [Day 3 →](Day3_TL_Verilog/README.md) · [Day 4 →](Day4_RISCV_CPU/README.md)
