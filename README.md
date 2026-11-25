@@ -1,8 +1,8 @@
-# RISC-V MYTH Workshop — Practical Reports (Days 1–4)
+# RISC-V MYTH Workshop — Practical Reports (Days 1–5)
 
 **RISC-V ISA • PicoRV32 • TL-Verilog / Makerchip**
 
-This repository documents four days of hands-on work with the RISC-V toolchain, processor simulation, and introductory digital hardware design. It includes **source code, original terminal/IDE screenshots, detailed explanations of each screenshot, observed results, and lessons learned**.
+This repository documents five days of hands-on work with the RISC-V toolchain, processor simulation, and introductory digital hardware design. It includes **source code, original terminal/IDE screenshots, detailed explanations of each screenshot, observed results, and lessons learned**.
 
 ## Open the illustrated day-by-day reports
 
@@ -12,8 +12,9 @@ This repository documents four days of hands-on work with the RISC-V toolchain, 
 | **Day 2** | **[PicoRV32 processor simulation](Day2_PicoRV32/README.md)** | 6 screenshots | RV32IM firmware generation, Verilog testbench, memory image conversion, sums of 3 and 6 verified with VVP |
 | **Day 3** | **[TL-Verilog and Makerchip](Day3_TL_Verilog/README.md)** | 13 screenshots | Logic gates, MUX, register, pipeline, counter, arithmetic and four-operation ALU |
 | **Day 4** | **[RISC-V CPU assembly and execution](Day4_RISCV_CPU/README.md)** | 15 screenshots (images pending upload) | Instruction fetch/decode, register file, ADD/ADDI, branch loop and observed result 45 |
+| **Day 5** | **[RISC-V LOAD/STORE and pipeline verification](Day5_RISCV_Load_Store/README.md)** | Screenshots pending upload | SW/LW data-memory operations, LOAD result 45, destination x15, write-back selection test |
 
-**Total: 45 screenshots documented:** 30 in Days 1–3 and 15 newly annotated in the Day 4 report (Day 4 image upload pending). To explore the work, click a **Day** report above rather than opening screenshots without context.
+**Days 1–4: 45 screenshots documented:** 30 in Days 1–3 and 15 newly annotated in the Day 4 report (Day 4 image upload pending). Day 5 evidence still needs to be uploaded. To explore the work, click a **Day** report above rather than opening screenshots without context.
 
 ## Selected recorded outputs
 
@@ -42,6 +43,12 @@ The arithmetic output was verified; `TRAP` signals a processor trap/termination 
 ### Day 4: RISC-V CPU sum-of-1-to-9 validation
 
 The running sum in register `x14` reaches `0x2D` (45), and the final register `x10` is observed briefly receiving `0x2D`. This is a verified *observed result*, not yet a permanent halted state; the workshop pass condition is cycle-count-based. See the [full Day 4 screenshot report](Day4_RISCV_CPU/README.md).
+
+### Day 5: Final Makerchip project
+
+**[Open the final Day 5 RISC-V CPU project in Makerchip](https://myth.makerchip.com/v228/ide/~0n5fqcvJ/p-0KXc2j)**
+
+Day 5 verifies Store Word (SW) and Load Word (LW) memory operations, the loaded value `0x0000002D` (45), destination register `x15`, and the write-back selection path. The passing simulation checks the write-back selection logic; it does **not** establish that LOAD wrote the value into x15 in the register file. See the [Day 5 report](Day5_RISCV_Load_Store/README.md).
 
 ### Day 3: ALU verification
 
@@ -81,4 +88,4 @@ References:
 
 ---
 
-**Start reading:** [Day 1 →](Day1_RISCV_ISA/README.md) · [Day 2 →](Day2_PicoRV32/README.md) · [Day 3 →](Day3_TL_Verilog/README.md) · [Day 4 →](Day4_RISCV_CPU/README.md)
+**Start reading:** [Day 1 →](Day1_RISCV_ISA/README.md) · [Day 2 →](Day2_PicoRV32/README.md) · [Day 3 →](Day3_TL_Verilog/README.md) · [Day 4 →](Day4_RISCV_CPU/README.md) · [Day 5 →](Day5_RISCV_Load_Store/README.md)
